@@ -22,14 +22,22 @@
             android:id="@+id/true_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/true_button" />
+            android:text="@string/true_button" />//Кнопка "верно"
         <Button
             android:id="@+id/false_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/false_button" />
+            android:text="@string/false_button" />//Кнопка "неверно"
 
     </LinearLayout>
+
+
+        <Button
+            android:id="@+id/cheat_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:text="@string/cheat_button" /> //CheatButton
 
 
         <ImageButton
@@ -39,7 +47,7 @@
             android:layout_gravity="bottom|left"
             android:src="@drawable/arrow_left"
             android:contentDescription="left"
-            />
+            />//Кнопка назад
 
         <ImageButton
             android:id="@+id/next_button"
@@ -48,7 +56,7 @@
             android:layout_gravity="bottom|right"
             android:src="@drawable/arrow_right"
             android:contentDescription="right"
-            />
+            />//Кнопка вперёд
 
 
 

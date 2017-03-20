@@ -1,5 +1,6 @@
 package com.aleksey.geoquiz;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class QuizActivity extends AppCompatActivity {
     private static final String KEY_INDEX="index";
     private Button mTrueButton;
     private Button mFalseButton;
+    private Button mCheatButton;
     private ImageButton mNextButton;
     private ImageButton mPrewButton;
     private TextView mQuestionTextView;
@@ -91,6 +93,16 @@ public class QuizActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate(Bundle) called");
         setContentView(R.layout.activity_quiz);
+        mCheatButton=(Button)findViewById(R.id.cheat_button);
+        mCheatButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                //Запуск ЧитАктивити
+                Intent i=new Intent(QuizActivity.this, CheatActivity.class);
+                startActivity(i);
+            }
+        });
+
         if (savedInstanceState != null) {
             mCurrentIndex = savedInstanceState.getInt(KEY_INDEX, 0);
         }
